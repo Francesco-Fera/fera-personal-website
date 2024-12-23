@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio 🚀
 
-## Getting Started
+[![Site preview](/public/portfolio-thumbnail.png)](https://francescofera.com/)
 
-First, run the development server:
+Questo è il mio portfolio personale, creato con [Next.js](https://nextjs.org/). Il portfolio utilizza:
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn UI](https://shadcn.com/)
+- [Vercel](https://vercel.com/)
+
+Il progetto usa [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) per ottimizzare e caricare Inter, un Google Font.
+
+# ✨ Get Started
 
 ```bash
+git clone git@github.com:francescofera/francesco-fera.git
+cd francesco-fera/
+
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Il progetto si avvia su `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 🚚 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tutti i branch o Pull Request vengono automaticamente distribuiti da [Vercel](https://vercel.com/) con l'integrazione GitHub di Vercel, dove il branch `master` viene automaticamente aliasato a [francescofera.com](https://francescofera.com/).
 
-## Learn More
+# 🏛 Licenses
 
-To learn more about Next.js, take a look at the following resources:
+© Copyright 2025 Francesco Fera
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sentiti libero di forkare e sperimentare con questo progetto! Ti chiedo solo di non pubblicare nulla senza che tu lo abbia personalizzato. Perché non cogliere l’occasione per creare qualcosa di unico? Usa questo progetto come base per sviluppare la tua visione personale e originale!
