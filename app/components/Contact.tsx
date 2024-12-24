@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-// import { createLead } from "@/app/actions";
+import { createLead } from "@/app/actions";
 import { Linkedin, ThumbsUp } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
@@ -41,13 +41,11 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      //   const leadResponse = await createLead({ ...formData, gdprAccepted });
+      const leadResponse = await createLead({ ...formData });
 
-      //   if (!(leadResponse.status === 200)) {
-      //     throw new Error("Failed to create lead in the database.");
-      //   }
-
-      console.log(formData);
+      if (!(leadResponse.status === 200)) {
+        throw new Error("Failed to create lead in the database.");
+      }
 
       setFormData({
         name: "",
