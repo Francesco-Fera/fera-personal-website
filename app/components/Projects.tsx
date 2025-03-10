@@ -1,52 +1,73 @@
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Binary, Hotel, Rocket } from "lucide-react";
+import { Binary, CodeXml, Hotel, Rocket } from "lucide-react";
 import Link from "next/link";
 
 const projects = [
   {
+    title: "Next Starter",
+    description:
+      "A production-ready Next.js SaaS boilerplate with authentication, database, and API integrations.",
+    website: "https://github.com/Francesco-Fera/next-starter",
+    icon: <CodeXml />,
+  },
+  {
     title: "Helpy Travel",
     description:
-      "SaaS per property managers. Ottieni il massimo dalla tua struttura.",
+      "A SaaS platform for property managers. Maximize your rental property's potential.",
     website: "https://helpytravel.com",
-
     icon: <Hotel />,
   },
   {
     title: "MCF Digital",
-    description: "Il tuo reparto IT, senza doverlo assumere.",
+    description:
+      "Your IT department, without hiring a full-time team. Software development & digital solutions.",
     website: "https://mcf-digital.com",
     icon: <Binary />,
   },
   {
     title: "The Italian List",
-    description: "La directory di tutte le startup italiane.",
-    website: "https://",
+    description:
+      "The most comprehensive directory of Italian startups with valuable resources and tools.",
+    website: "https://github.com/Francesco-Fera/the-italian-dir",
     icon: <Rocket />,
   },
 ];
 
 function Projects() {
   return (
-    <section className='px-4'>
-      <h3 className='text-3xl mb-6 font-bold'>Progetti</h3>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-4'>
+    <section className='px-4' id='projects'>
+      <h2 className='text-3xl mb-6 font-bold'>Featured Projects</h2>
+      <p className='mb-4 text-gray-600'>
+        Discover my latest digital projects, from SaaS platforms to IT solutions
+        for businesses and startups.
+      </p>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
         {projects.map((project) => (
           <Card key={project.title} className='flex flex-col justify-between'>
             <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
+              <div className='flex items-center space-x-2'>
+                {project.icon}
+                <CardTitle>{project.title}</CardTitle>
+              </div>
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
             <CardFooter className='flex justify-center'>
               <Button className='w-full'>
-                <Link href={project.website}>Vai al Sito</Link>
+                <Link
+                  href={project.website}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label={`Learn more about ${project.title}`}
+                >
+                  Learn More
+                </Link>
               </Button>
             </CardFooter>
           </Card>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
@@ -9,7 +9,7 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Francesco Fera",
-  description: "Sviluppo progetti digitali.",
+  description: "Software Developer",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='it' suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning>
       <body className={`${inter.variable} antialiased `}>
         <ThemeProvider
           attribute='class'

@@ -61,9 +61,9 @@ export default function Contact() {
   };
 
   return (
-    <Card id='contattami' className='border-none mt-24'>
+    <Card id='contact' className='border-none mt-24'>
       <CardHeader>
-        <CardTitle className='text-3xl font-bold '>Contattami</CardTitle>
+        <CardTitle className='text-3xl font-bold '>Let's Talk</CardTitle>
       </CardHeader>
 
       <CardContent>
