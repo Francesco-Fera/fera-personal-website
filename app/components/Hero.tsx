@@ -6,11 +6,11 @@ function Hero() {
   return (
     <section className='text-center py-20 px-4' id='hero'>
       <Image
-        src='/avatar.png'
+        src='/head.png'
         alt='Francesco Fera Avatar'
-        width={100}
-        height={100}
-        className='rounded-full mx-auto my-4'
+        width={150}
+        height={150}
+        className='rounded-full mx-auto animate-bounce'
         priority
       />
       <h1 className='text-5xl font-bold'>Francesco Fera</h1>
