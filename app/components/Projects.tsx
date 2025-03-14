@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Binary, CodeXml, Hotel, Rocket } from "lucide-react";
+import { Binary, CodeXml, Hotel, Rocket, ScanSearch } from "lucide-react";
 import Link from "next/link";
 
 const projects = [
@@ -18,14 +18,21 @@ const projects = [
     icon: <CodeXml />,
   },
   {
-    title: "Helpy Travel",
+    title: "Foodylytics",
+    description:
+      "Competitor analysis reports to find the perfect restaurant location.",
+    website: "https://www.foodylytics.com/",
+    icon: <ScanSearch />,
+  },
+  {
+    title: "Helpy Travel [Paused]",
     description:
       "A SaaS platform for property managers. Maximize your rental property's potential.",
     website: "https://helpytravel.com",
     icon: <Hotel />,
   },
   {
-    title: "MCF Digital",
+    title: "MCF Digital [Paused]",
     description:
       "Your IT department, without hiring a full-time team. Software development & digital solutions.",
     website: "https://mcf-digital.com",
@@ -43,7 +50,9 @@ const projects = [
 function Projects() {
   return (
     <section className='px-4' id='projects'>
-      <h2 className='text-3xl mb-6 font-bold'>Featured Projects</h2>
+      <h2 className='text-3xl mb-6 font-bold capitalize'>
+        Some of my projects
+      </h2>
       <p className='mb-4 text-gray-600'>
         Discover my latest digital projects, from SaaS platforms to IT solutions
         for businesses and startups.
