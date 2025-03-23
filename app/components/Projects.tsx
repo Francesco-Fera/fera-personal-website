@@ -72,7 +72,7 @@ function Projects() {
                 <Link
                   href={project.website}
                   target='_blank'
-                  rel='noopener noreferrer'
+                  rel='noopener'
                   aria-label={`Learn more about ${project.title}`}
                 >
                   Learn More
