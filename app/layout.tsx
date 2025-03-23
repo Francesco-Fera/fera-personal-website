@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Script from "next/script";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
@@ -30,6 +31,11 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <Script
+          defer
+          src='https://cloud.umami.is/script.js'
+          data-website-id='e1189031-ee4f-4d36-9fae-ea3f58ed96b6'
+        ></Script>
       </body>
     </html>
   );
