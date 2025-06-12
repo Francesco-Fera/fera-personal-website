@@ -11,6 +11,12 @@ import Link from "next/link";
 
 const projects = [
   {
+    title: "F2 MVPs",
+    description: "Fast, Affordable, and Done-for-You MVP development service.",
+    website: "https://github.com/Francesco-Fera/the-italian-dir",
+    icon: <Rocket />,
+  },
+  {
     title: "Next Starter",
     description:
       "A production-ready Next.js SaaS boilerplate with authentication, database, and API integrations.",
@@ -18,14 +24,14 @@ const projects = [
     icon: <CodeXml />,
   },
   {
-    title: "Foodylytics",
+    title: "Foodylytics [Zombie]",
     description:
       "Competitor analysis reports to find the perfect restaurant location.",
     website: "https://www.foodylytics.com/",
     icon: <ScanSearch />,
   },
   {
-    title: "Helpy Travel [Paused]",
+    title: "Helpy Travel [Exit]",
     description:
       "A SaaS platform for property managers. Maximize your rental property's potential.",
     website: "https://helpytravel.com",
@@ -37,13 +43,6 @@ const projects = [
       "Your IT department, without hiring a full-time team. Software development & digital solutions.",
     website: "https://mcf-digital.com",
     icon: <Binary />,
-  },
-  {
-    title: "The Italian List",
-    description:
-      "The most comprehensive directory of Italian startups with valuable resources and tools.",
-    website: "https://github.com/Francesco-Fera/the-italian-dir",
-    icon: <Rocket />,
   },
 ];
 
