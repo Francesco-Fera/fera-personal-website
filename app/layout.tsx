@@ -1,16 +1,39 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Cormorant_Garamond, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Script from "next/script";
 
-const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
+const cormorant = Cormorant_Garamond({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Francesco Fera",
-  description: "Software Developer",
+  description:
+    "Software developer and entrepreneur building digital products across Italy and Spain.",
+  authors: [{ name: "Francesco Fera" }],
+  openGraph: {
+    title: "Francesco Fera",
+    description:
+      "Software developer and entrepreneur building digital products across Italy and Spain.",
+    url: "https://francescofera.com",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Francesco Fera",
+  },
 };
 
 export default function RootLayout({
@@ -19,23 +42,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body className={`${inter.variable} antialiased `}>
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+    <html lang="en">
+      <body className={`${cormorant.variable} ${ibmPlexMono.variable}`}>
+        {children}
         <Script
           defer
-          src='https://cloud.umami.is/script.js'
-          data-website-id='e1189031-ee4f-4d36-9fae-ea3f58ed96b6'
-        ></Script>
+          src="https://cloud.umami.is/script.js"
+          data-website-id="e1189031-ee4f-4d36-9fae-ea3f58ed96b6"
+        />
       </body>
     </html>
   );
