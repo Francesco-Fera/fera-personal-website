@@ -20,7 +20,7 @@ export default function Home() {
         <section className='about-section'>
           <p className='label'>About</p>
           <p className='about-text'>
-            <strong>.NET backend developer</strong> and{" "}
+            <strong>Software developer</strong> and{" "}
             <strong>entrepreneur</strong>. I design and build digital products —
             SaaS platforms, APIs, web applications. I work at the intersection
             of <strong>software engineering</strong>,{" "}
@@ -50,7 +50,7 @@ export default function Home() {
         <hr className='divider' />
 
         {/* Now */}
-        <section className='now-section'>
+        {/* <section className='now-section'>
           <p className='label'>Now</p>
           <div className='now-items'>
             {now.map((item) => (
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
         </section>
 
-        <hr className='divider' />
+        <hr className='divider' /> */}
 
         {/* Elsewhere */}
         <section className='elsewhere-section'>
