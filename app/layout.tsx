@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://cloud.umami.is" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/icon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -92,10 +92,17 @@ export default function RootLayout({
       <body className={`${cormorant.variable} ${ibmPlexMono.variable}`}>
         {children}
         <Script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="e1189031-ee4f-4d36-9fae-ea3f58ed96b6"
+          src="https://www.googletagmanager.com/gtag/js?id=G-4D0KZ3Z8XS"
+          strategy="afterInteractive"
         />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4D0KZ3Z8XS');
+          `}
+        </Script>
       </body>
     </html>
   );
