@@ -21,12 +21,12 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "Francesco Fera",
   description:
-    "Software developer and entrepreneur building digital products across Italy and Spain.",
+    "Software developer and entrepreneur building digital products across Europe.",
   authors: [{ name: "Francesco Fera" }],
   openGraph: {
     title: "Francesco Fera",
     description:
-      "Software developer and entrepreneur building digital products across Italy and Spain.",
+      "Software developer and entrepreneur building digital products across Europe.",
     url: "https://francescofera.com",
     type: "website",
   },
