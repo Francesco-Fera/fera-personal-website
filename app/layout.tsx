@@ -18,22 +18,55 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const siteUrl = "https://francescofera.com";
+
 export const metadata: Metadata = {
-  title: "Francesco Fera",
+  metadataBase: new URL(siteUrl),
+  title: "Francesco Fera — Software Developer & Entrepreneur",
   description:
-    "Software developer and entrepreneur building digital products across Europe.",
+    "Software developer and entrepreneur building digital products — SaaS platforms, APIs, and web applications across Europe.",
   authors: [{ name: "Francesco Fera" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Francesco Fera",
+    title: "Francesco Fera — Software Developer & Entrepreneur",
     description:
-      "Software developer and entrepreneur building digital products across Europe.",
-    url: "https://francescofera.com",
+      "Software developer and entrepreneur building digital products — SaaS platforms, APIs, and web applications across Europe.",
+    url: siteUrl,
+    siteName: "Francesco Fera",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Francesco Fera — Software Developer & Entrepreneur",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "Francesco Fera",
+    card: "summary_large_image",
+    title: "Francesco Fera — Software Developer & Entrepreneur",
+    description:
+      "Software developer and entrepreneur building digital products — SaaS platforms, APIs, and web applications across Europe.",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Francesco Fera",
+  url: siteUrl,
+  email: "me@francescofera.com",
+  jobTitle: "Software Developer",
+  description:
+    "Software developer and entrepreneur building digital products across Europe.",
+  sameAs: [
+    "https://linkedin.com/in/francesco-fera-87097b232",
+    "https://github.com/Francesco-Fera",
+  ],
 };
 
 export default function RootLayout({
@@ -43,6 +76,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://cloud.umami.is" />
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#0d0d0d" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${cormorant.variable} ${ibmPlexMono.variable}`}>
         {children}
         <Script

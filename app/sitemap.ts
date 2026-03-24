@@ -1,8 +1,12 @@
-export default async function sitemap() {
-  const routes = [""];
+import type { MetadataRoute } from "next";
 
-  return routes.map((route) => ({
-    url: `https://francescofera.com${route}`,
-    lastModified: new Date(),
-  }));
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: "https://francescofera.com",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 1,
+    },
+  ];
 }

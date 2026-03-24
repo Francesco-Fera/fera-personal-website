@@ -1,11 +1,13 @@
-import { now, work, elsewhere } from "@/data/content";
+import { work, elsewhere } from "@/data/content";
 
 export default function Home() {
   return (
     <>
       <main>
         <header>
-          <p className='location-line'>Europe · Available</p>
+          <p className='location-line' aria-label='Location and availability'>
+            Europe · Available
+          </p>
           <h1>
             Francesco
             <br />
@@ -17,8 +19,8 @@ export default function Home() {
         </header>
 
         {/* About */}
-        <section className='about-section'>
-          <p className='label'>About</p>
+        <section className='about-section' aria-labelledby='about-heading'>
+          <h2 className='label' id='about-heading'>About</h2>
           <p className='about-text'>
             <strong>Software developer</strong> and{" "}
             <strong>entrepreneur</strong>. I design and build digital products —
@@ -27,7 +29,7 @@ export default function Home() {
             <strong>product thinking</strong>, and{" "}
             <strong>business development</strong>.
           </p>
-          <a href='mailto:me@francescofera.com' className='contact-link'>
+          <a href='mailto:me@francescofera.com' className='contact-link' aria-label='Send email to me@francescofera.com'>
             me@francescofera.com
           </a>
         </section>
@@ -35,11 +37,11 @@ export default function Home() {
         <hr className='divider' />
 
         {/* Selected Work */}
-        <section className='work-section'>
-          <p className='label'>Selected Work</p>
-          <div className='work-items'>
+        <section className='work-section' aria-labelledby='work-heading'>
+          <h2 className='label' id='work-heading'>Selected Work</h2>
+          <div className='work-items' role='list'>
             {work.map((item) => (
-              <div key={item.name} className='work-item'>
+              <div key={item.name} className='work-item' role='listitem'>
                 <span className='work-name'>{item.name}</span>
                 <span className='work-sector'>{item.sector}</span>
               </div>
@@ -49,27 +51,9 @@ export default function Home() {
 
         <hr className='divider' />
 
-        {/* Now */}
-        {/* <section className='now-section'>
-          <p className='label'>Now</p>
-          <div className='now-items'>
-            {now.map((item) => (
-              <div key={item.title} className='now-item'>
-                <div>
-                  <div className='now-item-title'>{item.title}</div>
-                  <div className='now-item-desc'>{item.desc}</div>
-                </div>
-                <div className='now-item-tag'>{item.tag}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <hr className='divider' /> */}
-
         {/* Elsewhere */}
-        <section className='elsewhere-section'>
-          <p className='label'>Elsewhere</p>
+        <nav className='elsewhere-section' aria-labelledby='elsewhere-heading'>
+          <h2 className='label' id='elsewhere-heading'>Elsewhere</h2>
           <div className='elsewhere-items'>
             {elsewhere.map((item) => (
               <a
@@ -84,7 +68,7 @@ export default function Home() {
               </a>
             ))}
           </div>
-        </section>
+        </nav>
       </main>
 
       <footer>
