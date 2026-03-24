@@ -89,7 +89,7 @@ export default function Home() {
 
       <footer>
         <div className='footer-inner'>
-          <span>© 2026 Francesco Fera</span>
+          <span>© {new Date().getFullYear()} Francesco Fera</span>
           <span>Europe</span>
         </div>
       </footer>
