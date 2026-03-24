@@ -16,39 +16,6 @@ export default function Home() {
           </p>
         </header>
 
-        {/* Now */}
-        <section className="now-section">
-          <p className="label">Now</p>
-          <div className="now-items">
-            {now.map((item) => (
-              <div key={item.title} className="now-item">
-                <div>
-                  <div className="now-item-title">{item.title}</div>
-                  <div className="now-item-desc">{item.desc}</div>
-                </div>
-                <div className="now-item-tag">{item.tag}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <hr className="divider" />
-
-        {/* Selected Work */}
-        <section className="work-section">
-          <p className="label">Selected Work</p>
-          <div className="work-items">
-            {work.map((item) => (
-              <div key={item.name} className="work-item">
-                <span className="work-name">{item.name}</span>
-                <span className="work-sector">{item.sector}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <hr className="divider" />
-
         {/* About */}
         <section className="about-section">
           <p className="label">About</p>
@@ -68,6 +35,39 @@ export default function Home() {
           <a href="mailto:hello@francescofera.com" className="contact-link">
             hello@francescofera.com
           </a>
+        </section>
+
+        <hr className="divider" />
+
+        {/* Selected Work */}
+        <section className="work-section">
+          <p className="label">Selected Work</p>
+          <div className="work-items">
+            {work.map((item) => (
+              <div key={item.name} className="work-item">
+                <span className="work-name">{item.name}</span>
+                <span className="work-sector">{item.sector}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <hr className="divider" />
+
+        {/* Now */}
+        <section className="now-section">
+          <p className="label">Now</p>
+          <div className="now-items">
+            {now.map((item) => (
+              <div key={item.title} className="now-item">
+                <div>
+                  <div className="now-item-title">{item.title}</div>
+                  <div className="now-item-desc">{item.desc}</div>
+                </div>
+                <div className="now-item-tag">{item.tag}</div>
+              </div>
+            ))}
+          </div>
         </section>
 
         <hr className="divider" />

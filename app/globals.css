@@ -64,13 +64,13 @@ main {
 header {
   animation: fadeUp 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0s both;
 }
-.now-section {
+.about-section {
   animation: fadeUp 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.1s both;
 }
 .work-section {
   animation: fadeUp 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.2s both;
 }
-.about-section {
+.now-section {
   animation: fadeUp 0.7s cubic-bezier(0.25, 1, 0.5, 1) 0.3s both;
 }
 .elsewhere-section {
